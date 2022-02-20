@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor http
+@{
+    ViewData["Title"] = "getsession";
+}
+
+<h1>Show Session</h1>
+<h4>Name:@http.HttpContext.Session.GetString("uname")</h4>
+<h4>SessionId:@http.HttpContext.Session.Id</h4>
+
